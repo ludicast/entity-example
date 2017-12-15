@@ -1,4 +1,5 @@
 import { PenActions, CHANGE_PEN_THICKNESS, CHANGE_PEN_COLOR } from "../actions/pen.actions"
+
 export interface PenState {
   color: number
   thickness: number
