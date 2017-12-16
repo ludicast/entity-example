@@ -7,13 +7,15 @@ import { StoreModule } from '@ngrx/store'
 
 
 import { PenPanelComponent } from "./containers/pen-panel.component"
+import { CardComponent } from "./containers/card.component"
 import { ColorPickerComponent } from "./components/color-picker.component"
 import { PenWidthDropdownComponent } from "./components/pen-width-dropdown.component"
 import { reducers } from "./store/reducers"
 
 @NgModule({
   declarations: [
-    AppComponent, PenPanelComponent, ColorPickerComponent, PenWidthDropdownComponent
+    AppComponent, PenPanelComponent, ColorPickerComponent,
+    PenWidthDropdownComponent, CardComponent
   ],
   imports: [
     BrowserModule,

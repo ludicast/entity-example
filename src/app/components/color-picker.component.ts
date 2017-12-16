@@ -8,7 +8,7 @@ const asNumber = (r, g, b) =>
   selector: "color-picker",
   template: `
     <span *ngFor="let color of colors">
-      <button (click)="changeColor(color)" [style.border]="currentColor==color ? '6px solid red' : ''" [style.backgroundColor]="hashColor(color)">&nbsp;&nbsp;</button>
+      <button (click)="changeColor(color)" [style.border]="currentColor==color ? '3px solid black' : ''" [style.backgroundColor]="hashColor(color)">&nbsp;&nbsp;</button>
     </span>
 `
 })

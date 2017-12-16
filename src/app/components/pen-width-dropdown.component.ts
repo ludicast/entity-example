@@ -3,8 +3,9 @@ import { Component, Input, Output, EventEmitter } from "@angular/core"
 @Component({
   selector: "pen-width-dropdown",
   template: `
+    <b>Thickness:</b>
     <select #selectElem (change)="changeThickness(selectElem.value)">
-      <option *ngFor="let val of vals" [value]="val">{{ val }}</option>
+      <option [selected]="currentThickness == val" *ngFor="let val of vals" [value]="val">{{ val }}</option>
     </select>
 `
 })
