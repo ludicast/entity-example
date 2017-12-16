@@ -1,10 +1,11 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core"
+import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter } from "@angular/core"
 
 
 const asNumber = (r, g, b) =>
   (r * 256 * 256) + (g * 256) + (b)
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "color-picker",
   template: `
     <span *ngFor="let color of colors">

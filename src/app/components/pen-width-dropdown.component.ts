@@ -1,6 +1,7 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core"
+import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter } from "@angular/core"
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "pen-width-dropdown",
   template: `
     <b>Thickness:</b>

@@ -10,7 +10,7 @@ export const initial: PenState = {
   thickness: 2
 }
 
-export const penReducer = (state: PenState = initial, action: PenActions) => {
+export const penReducer = (state: PenState = initial, action: PenActions): PenState => {
   switch (action.type) {
     case CHANGE_PEN_THICKNESS:
       return {

@@ -1,0 +1,11 @@
+<pen-width-dropdown
+  (newThickness)="changeThickness($event)"
+  [currentThickness]="(penData$|async).thickness"
+></pen-width-dropdown>
+<color-picker
+  (newColor)="changeColor($event)"
+  [currentColor]="(penData$|async).color"
+></color-picker>
+
+
+

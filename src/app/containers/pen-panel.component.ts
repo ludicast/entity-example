@@ -8,10 +8,7 @@ import { ChangePenThickness, ChangePenColor } from "../store/actions/pen.actions
 
 @Component({
   selector: "pen-panel",
-  template: `
-  <pen-width-dropdown (newThickness)="changeThickness($event)" [currentThickness]="(penData$|async).thickness"></pen-width-dropdown>
-  <color-picker (newColor)="changeColor($event)" [currentColor]="(penData$|async).color"></color-picker>
-`
+  templateUrl: "./pen-panel.component.html"
 })
 export class PenPanelComponent {
   penData$: Observable<PenState>
@@ -21,8 +18,11 @@ export class PenPanelComponent {
   }
 
   changeColor = (color: number) => {
-    console.log(color) || this.store.dispatch(new ChangePenColor(color))
+    this.store.dispatch(new ChangePenColor(color))
   }
+
+
+
   changeThickness = (thickness: number) => {
     this.store.dispatch(new ChangePenThickness(thickness))
   }
