@@ -7,11 +7,7 @@ const asNumber = (r, g, b) =>
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "color-picker",
-  template: `
-    <span *ngFor="let color of colors">
-      <button (click)="changeColor(color)" [style.border]="currentColor==color ? '3px solid black' : ''" [style.backgroundColor]="hashColor(color)">&nbsp;&nbsp;</button>
-    </span>
-`
+  templateUrl: "./color-picker.component.html"
 })
 export class ColorPickerComponent {
   @Input() currentColor: number

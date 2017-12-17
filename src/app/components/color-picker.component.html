@@ -1,0 +1,3 @@
+<span *ngFor="let color of colors">
+  <button (click)="changeColor(color)" [style.border]="currentColor==color ? '3px solid black' : ''" [style.backgroundColor]="hashColor(color)">&nbsp;&nbsp;</button>
+</span>
